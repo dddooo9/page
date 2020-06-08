@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>mind</title>
+    <style>
+        .a{
+            padding: 100px 0px;
+        }
+        .row{
+            text-align: center;
+        }
+        h1, p, h5{
+            text-align: center;
+            font-family: 'Nanum Pen Script', cursive;
+        }
+        .card{
+            margin: auto;
+            width: 400px;
+        }
+        .sp{
+            background-color: pink;
+        }
+        .evy{
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+        <div>
+            <h1><a class="sp">지금 당신의 기분은 어떠신가요?</a></h1>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">오늘은 행복해요</h5>
+                <p class="card-text">행복해서 다행이에요</p>
+                <a href='{% url "emotion:happy" %}' class="btn btn-success">행복해요</a>
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">오늘은 우울해요</h5>
+                <p class="card-text">우울한 그 마음 달래줄게요</p>
+                <a href='{% url "emotion:sad" %}' class="btn btn-info">우울해요</a>
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">오늘은 화가나요</h5>
+                    <p class="card-text">화가나는 그 마음 달래줄게요</p>
+                    <a href='{% url "emotion:angry" %}' class="btn btn-danger">화가나요</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">오늘은 피곤해요</h5>
+                    <p class="card-text">피곤한 그 마음 달래줄게요</p>
+                    <a href='{% url "emotion:tired" %}' class="btn btn-secondary">피곤해요</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="evy">
+        <a href='{% url "emotion:everyimg" %}' class="btn btn-warning">전체보기</a> 
+    </div>
+     
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
